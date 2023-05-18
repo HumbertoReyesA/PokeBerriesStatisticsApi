@@ -5,7 +5,8 @@ Maintainer: Humberto Reyes
 
 # Software to install
 - Python 3.8 or greater. 
-- If needed, a virtual environment can be created with this command: py -3 -m venv .venv. To activate the virtual environment: .venv\Scripts\activate. Now, any python version can be installed.
+- Or instead of install python globally, a virtual environment can be created:
+  From the PokeBerriesStatisticsApi folder type this command: py -3 -m venv .venv. To activate the virtual environment: .venv\Scripts\activate. Now, any python version can be installed.
 
 - Git 2.40
 
