@@ -31,4 +31,8 @@ Maintainer: Humberto Reyes
 9. In a few seconds you will see the Poke Berries Statistics in a JSON format.
 
 # Testing
-To run the tests, from the console command line type "pytest tests.py"
+- To run the tests, from the console command line type: pytest tests.py.
+- Pytest runs automatically all the unit tests available in the tests.py module.
+
+# Warning
+When running this API, sometimes the Pokeapi is not available and sends a 403 HTTP code indicating that it is Forbidden. Don't worry, the api catches this kind of exception.
