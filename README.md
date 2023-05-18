@@ -27,7 +27,7 @@ Maintainer: Humberto Reyes
    * Restarting with stat
    * Debugger is active!
    * Debugger PIN: 312-187-867
-8. Now open your browser on http://127.0.0.1:5000.
+8. Now open your browser on http://127.0.0.1:5000/allBerryStats.
 9. In a few seconds you will see the Poke Berries Statistics in a JSON format.
 
 # Testing

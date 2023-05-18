@@ -1,4 +1,3 @@
-import json
 import requests
 from itertools import groupby
 from statistics import mean
@@ -6,8 +5,9 @@ from statistics import median
 from statistics import variance
 from typing import List
 from flask import Flask
-from flask import Response
-from flask_restful import Resource, abort
+from flask import jsonify
+from flask_restful import Resource
+from flask_restful import abort
 from flask_restful import Api
 
 app = Flask(__name__)
@@ -78,8 +78,10 @@ class PokeBerries(Resource):
         response["variance_growth_time"] = variance(growth_time)
         response["mean_growth_time"] = mean(growth_time)
         response["frequency_growth_time"] = get_growth_time_freq(collection=growth_time)
-        # Serializing the response object to a JSON formatted string
-        api_response: str = json.dumps(response)
-        return Response(response=api_response, status=200, content_type='application/json')
+        # Serializing the response object as JSON
+        api_response = jsonify(response)
+        api_response.status_code = 200
+        api_response.content_type = 'application/json'
+        return api_response
 
 api.add_resource(PokeBerries, '/allBerryStats')

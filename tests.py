@@ -1,4 +1,3 @@
-from flask import Response
 import pytest
 from api import get_berries_count
 from api import get_berries_data
@@ -7,6 +6,8 @@ from api import get_growth_time_freq
 from api import get_growth_time_list
 from api import abort_if_status_code_is_not_200
 from api import PokeBerries
+from api import app
+from flask import Response
 
 
 @pytest.fixture(autouse=True)
@@ -20,7 +21,7 @@ def growth_time_coll():
     return [3, 3, 3, 3, 3, 4, 4, 4, 12, 8, 5, 5, 5, 5, 5, 2]
 
 @pytest.fixture(autouse=True)
-def response():
+def mocked_response():
     """Final response"""
     return {
         "berries_names": [
@@ -129,8 +130,9 @@ def test_get_growth_time_freq_fails(growth_time_coll):
 
 def test_get_poke_berries_passes(poke_berries_instance):
     """Test the final response object is an instance of the Response class"""
-    response = poke_berries_instance.get(url='https://pokeapi.co/api/v2/berry/')
-    assert isinstance(response, Response) == True
+    with app.app_context():
+        response = poke_berries_instance.get(url='https://pokeapi.co/api/v2/berry/')
+        assert isinstance(response, Response) == True
 
 def test_get_poke_berries_fails(poke_berries_instance):
     """Raise an exception because of the incomplete url"""
