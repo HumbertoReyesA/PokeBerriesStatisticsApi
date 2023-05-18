@@ -4,13 +4,8 @@ Api in charge to get all the berries statistics.
 Maintainer: Humberto Reyes
 
 # Software to install
-- Python 3.8 or greater or you can create a virtual environment with this command:
-  py -3 -m venv .venv
-
-  To activate the virtual environment:
-  .venv\Scripts\activate
-
-  There, any python version can be installed.
+- Python 3.8 or greater. 
+- If needed, a virtual environment can be created with this command: py -3 -m venv .venv. To activate the virtual environment: .venv\Scripts\activate. Now, any python version can be installed.
 
 - Git 2.40
 
