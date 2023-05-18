@@ -29,3 +29,6 @@ Maintainer: Humberto Reyes
    * Debugger PIN: 312-187-867
 8. Now open your browser on http://127.0.0.1:5000.
 9. In a few seconds you will see the Poke Berries Statistics in a JSON format.
+
+# Testing
+To run the tests, from the console command line type "pytest tests.py"
