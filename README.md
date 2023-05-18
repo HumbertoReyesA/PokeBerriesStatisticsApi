@@ -10,7 +10,7 @@ Maintainer: Humberto Reyes
 
 - Git 2.40
 
-# Steps to run the API locally.
+# Steps to run the API locally
 
 1. In Windows, open the cmd terminal and get to the root folder where you want to place the repository.
 2. Once there, clone the repository with this comman: git clone https://github.com/HumbertoReyesA/PokeBerriesStatisticsApi.git.
